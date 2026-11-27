@@ -4,6 +4,9 @@
   --muted: #666666;
   --accent: #1a5fb4;
   --rule: #dddddd;
+  --badge-bg: #eef6ef;
+  --badge-text: #1e7a3a;
+  --badge-border: #b9dcc2;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -12,6 +15,9 @@
     --muted: #a0a0a0;
     --accent: #78aeed;
     --rule: #3a3a3c;
+    --badge-bg: #0f1f15;
+    --badge-text: #6fe39a;
+    --badge-border: #2f4a38;
   }
 }
 * { box-sizing: border-box; }
@@ -53,3 +59,17 @@ footer {
   .profile dt { float: none; width: auto; }
   .profile dd { margin-left: 0; }
 }
+
+ul.timeline { list-style: none; padding-left: 0; }
+ul.timeline li {
+  display: flex; gap: 16px; align-items: baseline;
+  padding: 10px 0; margin: 0; border-bottom: 1px dashed var(--rule);
+}
+ul.timeline li:last-child { border-bottom: none; }
+.year {
+  flex: 0 0 auto; font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.85rem; letter-spacing: 0.08em; padding: 2px 12px;
+  background: var(--badge-bg); color: var(--badge-text);
+  border: 1px solid var(--badge-border); border-radius: 2px;
+}
+.note { color: var(--badge-text); font-size: 0.9rem; white-space: nowrap; }
