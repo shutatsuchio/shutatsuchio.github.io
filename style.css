@@ -1,3 +1,12 @@
+@font-face { font-family: "CMU Serif"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("fonts/cmu-serif-500-roman.woff2") format("woff2"); }
+@font-face { font-family: "CMU Serif"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url("fonts/cmu-serif-500-italic.woff2") format("woff2"); }
+@font-face { font-family: "CMU Serif"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("fonts/cmu-serif-700-roman.woff2") format("woff2"); }
+@font-face { font-family: "CMU Typewriter Text"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("fonts/cmu-typewriter-text-500-roman.woff2") format("woff2"); }
+
 :root {
   --bg: #ffffff;
   --text: #222222;
@@ -25,16 +34,17 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  font-family: "CMU Serif", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+  font-size: 17px;
   line-height: 1.75;
 }
 .container { max-width: 860px; margin: 0 auto; padding: 0 16px; }
 header { border-bottom: 1px solid var(--rule); padding: 24px 0 8px; }
-header h1 { margin: 0; font-size: 1.8rem; font-weight: 600; }
+header h1 { margin: 0; font-size: 2rem; font-weight: 700; }
 nav { margin-top: 8px; }
 nav a {
   margin-right: 20px; color: var(--muted); text-decoration: none;
-  font-size: 0.95rem; letter-spacing: 0.05em;
+  font-size: 0.95rem; letter-spacing: 0.08em; font-variant: small-caps;
 }
 nav a:hover, nav a.active { color: var(--accent); }
 main { padding: 8px 0 32px; }
@@ -67,7 +77,7 @@ ul.timeline li {
 }
 ul.timeline li:last-child { border-bottom: none; }
 .year {
-  flex: 0 0 auto; font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+  flex: 0 0 auto; font-family: "CMU Typewriter Text", "Courier New", monospace;
   font-size: 0.85rem; letter-spacing: 0.08em; padding: 2px 12px;
   background: var(--badge-bg); color: var(--badge-text);
   border: 1px solid var(--badge-border); border-radius: 2px;
